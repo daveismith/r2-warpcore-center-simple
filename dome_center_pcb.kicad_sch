@@ -3056,7 +3056,7 @@
     (property "Sheetname" "FTDI" (at 109.855 29.7684 0)
       (effects (font (size 1.27 1.27)) (justify left bottom))
     )
-    (property "Sheetfile" "FTDI.kicad_sch" (at 109.855 48.2096 0)
+    (property "Sheetfile" "ftdi.kicad_sch" (at 109.855 48.2096 0)
       (effects (font (size 1.27 1.27)) (justify left top))
     )
     (instances
