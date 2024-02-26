@@ -27,21 +27,21 @@ jobs:
         echo "COMMIT = ${COMMIT}"    
         echo "ref: ${{ github.ref }}"
         echo "default: ${{ env.default }}"
-        sed -i "s!<<hash>>!${COMMIT}!" r2_warpcore_driver.kicad_pcb
+        sed -i "s!<<hash>>!${COMMIT}!" dome_center_pcb.kicad_pcb
 
     - name: Generate Export Files
       uses: INTI-CMNB/KiBot@v2_k7
       with:
           config: .github/workflows/scripts/kibot/config.kibot.yaml
-          schema: r2_warpcore_driver.kicad_sch
-          board: r2_warpcore_driver.kicad_pcb
-          dir: r2_warpcore_driver
+          schema: dome_center_pcb.kicad_sch
+          board: dome_center_pcb.kicad_pcb
+          dir: dome_center_pcb
 
     - name: Upload Export Files as Artifacts
       uses: actions/upload-artifact@v4
       with:
-        name: r2_warpcore_driver
-        path: r2_warpcore_driver
+        name: dome_center_pcb
+        path: dome_center_pcb
         if-no-files-found: error
         retention-days: 60
     
